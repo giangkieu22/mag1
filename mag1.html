@@ -8,12 +8,17 @@
 <input id="inp">
 <button onclick="add()"> Add </button>
 <button onclick="disp()"> Display </button>
+<span id="span"> </span>
 <script>
     let arr = [];
     function add() {
-        var x = document.getElementById("inp");
-        arr.push(x).value;
-        alert(arr.length);
+        let x = document.getElementById("inp").value;
+        arr.push(x);
+    }
+    function disp() {
+        for (let i = 0; i < arr.length; i++) {
+            document.getElementById("span").innerHTML += "Element " + i + " = " + arr[i] + '<br/>';
+        }
     }
 </script>
 </body>
